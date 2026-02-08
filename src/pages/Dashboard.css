@@ -1,0 +1,146 @@
+/* Dashboard container */
+.dashboard {
+  background-color: #fcfcfc;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 40px 100px;
+}
+
+/* Hero Section - Deep Professional Navy */
+.hero {
+  background-color: #0f172a; /* Sophisticated Slate-Navy */
+  color: white;
+  padding: 100px 20px 140px; /* Extra bottom padding for overlap */
+  text-align: center;
+}
+
+.badge {
+  color: #b88e2f; /* Gold accent */
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 52px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
+.sub {
+  font-size: 18px;
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Features - Floating Overlap Cards */
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: -60px; /* This creates the overlap effect */
+  margin-bottom: 80px;
+}
+
+.feature-card {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.feature-card .icon {
+  font-size: 32px;
+  background: #f8fafc;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.feature-card .title {
+  font-weight: 700;
+  font-size: 16px;
+  color: #1e293b;
+  margin-bottom: 2px;
+}
+
+.feature-card .desc {
+  font-size: 13px;
+  color: #64748b;
+}
+
+/* Filters - Clean Minimalist Pills */
+.filters {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filters button {
+  border: 1px solid #e2e8f0;
+  background: white;
+  padding: 10px 24px;
+  border-radius: 100px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: #64748b;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filters .active {
+  background: #0f172a;
+  color: white;
+  border-color: #0f172a;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
+}
+
+/* Product Grid - Fixed the "Mess" */
+/* Product Grid - Forced to 2 products per row */
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Exactly two columns */
+  gap: 40px; /* Space between products */
+  padding: 20px 0;
+  width: 100%;
+}
+
+/* Fix for individual product items to prevent overlapping */
+.product-card-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden; /* Keeps the "mesh" inside the card */
+  border: 1px solid #f0f0f0;
+}
+
+/* Ensure images don't overflow their containers */
+.product-image-fixed {
+  width: 100%;
+  height: 200px; /* Adjust height as needed for 2-column layout */
+  overflow: hidden;
+}
+
+.product-image-fixed img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover; /* Prevents image stretching */
+}

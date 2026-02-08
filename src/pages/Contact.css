@@ -1,0 +1,130 @@
+.contact-page {
+  min-height: calc(100vh - 64px - 120px); 
+  background: linear-gradient(135deg, #0f172a, #020617);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 6%;
+  color: #fff;
+}
+
+.contact-container {
+  max-width: 100%;
+  width: 100%;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.contact-header p {
+  margin-top: 12px;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Left Info */
+.contact-info h2 {
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+.info-block {
+  margin-bottom: 20px;
+}
+
+.info-block span {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 4px;
+}
+
+.info-block p {
+  font-size: 1rem;
+}
+
+/* Form */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: #e5e7eb;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+}
+
+.input-group textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #cbd5e1;
+}
+
+button {
+  margin-top: 10px;
+  padding: 14px;
+  border-radius: 30px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  color: #111;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(249, 115, 22, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}

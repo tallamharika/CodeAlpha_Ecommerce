@@ -1,0 +1,204 @@
+/* Index.css */
+
+/* Remove any default browser padding that might shrink the width */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.home-container {
+  width: 100%;
+}
+
+.hero-section {
+  position: relative;
+  /* Crucial: Use viewport units for full width and height */
+  width: 100vw; 
+  height: 100vh; 
+  
+  /* Image scaling */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+  box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+/* Ensure the overlay also covers the full 100vw */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(75deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  color: #fff;
+}
+
+/* Match the large typography from Pic 2 */
+.hero-content h1 {
+  font-size: clamp(3rem, 8vw, 5rem); /* Responsive font size */
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 20px 0;
+}
+
+/* FOOTER SECTION - Placed AFTER the full-width image */
+.contact-strip {
+  width: 100%;
+  background: #ffffff;
+  padding: 60px 8%;
+  color: #111;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+}
+/* WHY CHOOSE LUXE */
+.why-luxe {
+  background: linear-gradient(180deg, #020617, #020617);
+  padding: 100px 6%;
+  color: #fff;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.why-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.why-subtitle {
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+/* Cards */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.why-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.why-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(249, 115, 22, 0.35);
+}
+
+.why-icon {
+  font-size: 2.2rem;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.why-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-title {
+    font-size: 2.2rem;
+  }
+}
+/* Hero Buttons */
+.hero-actions {
+  margin-top: 40px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Base button styling */
+.btn {
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  border-radius: 50px; /* Rounded pill shape */
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Solid button for Sign In */
+.btn-solid {
+  background: linear-gradient(135deg, #f97316, #facc15); /* Orange gradient */
+  color: #111;
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.4);
+}
+
+.btn-solid:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(249, 115, 22, 0.5);
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+}
+
+/* Outline button for Create Account */
+.btn-outline {
+  border: 2px solid #f97316;
+  color: #f97316;
+  background: transparent;
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.2);
+}
+
+.btn-outline:hover {
+  background: #f97316;
+  color: #111;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(249, 115, 22, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}

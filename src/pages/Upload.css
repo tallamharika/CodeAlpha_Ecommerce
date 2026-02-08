@@ -1,0 +1,58 @@
+.upload-page {
+  text-align: center;
+  padding: 50px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.upload-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.upload-subtitle {
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.upload-dropzone {
+  border: 2px dashed #ff8c42; /* Matches your dashed orange border */
+  background-color: #fff9f5;
+  padding: 40px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.select-files-btn {
+  background-color: #1e293b;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+/* Visibility fix for text */
+.form-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #333; /* Dark text for visibility */
+  background-color: #fff;
+}
+
+.final-upload-btn {
+  width: 100%;
+  background-color: #1e293b;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
