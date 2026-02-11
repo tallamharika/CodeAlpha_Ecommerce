@@ -11,10 +11,14 @@ import Register from "./pages/Register";
 import Dashboard from "./pages/Dashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Profile from "./pages/Profile";
+import "./App.css";
 function App() {
   return (
     <>
-      <Navbar />
+      <header>
+  <Navbar />
+</header>
+
 
       <Routes>
         <Route

@@ -55,13 +55,53 @@ const Cart = () => {
       console.error("Clear error:", err);
     }
   };
+const placeOrder = async () => {
+  try {
+    const orderItems = items.map(item => ({
+      productId: item.productId,
+      name: item.name,
+      price: item.price,
+      quantity: item.quantity || 1
+    }));
+
+    const res = await fetch("http://localhost:5000/api/orders/place", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        userId,
+        items: orderItems,
+        totalAmount: subtotal
+      })
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.message || "Order failed");
+    }
+
+    return true;
+  } catch (err) {
+    console.error("Order Error:", err);
+    alert("Order failed. Try again.");
+    return false;
+  }
+};
 
   // Logic for the new buttons
   const handleProceedToPay = async () => {
-  alert("Payment Successful!"); 
-  // This tells the backend to empty the database for this user
-  await clearCart(); 
-  // Now the items will disappear from the screen!
+  if (items.length === 0) {
+    alert("Cart is empty");
+    return;
+  }
+
+  const success = await placeOrder();
+
+  if (success) {
+    alert("✅ Order placed successfully!");
+    await clearCart(); // clears DB + UI
+    navigate("/dashboard"); // 👈 ADD THIS
+  }
 };
 
   const handleContinueShopping = () => {

@@ -8,6 +8,7 @@ import cartRoutes from "./routes/cart.js";
 import multer from "multer"; 
 import path from "path";   
 import Product from "./models/Product.js";
+import orderRoutes from "./routes/order.js";
 
 dotenv.config();
 const app = express();
@@ -17,7 +18,7 @@ app.use(express.json());
 
 // Static folder to serve uploaded images to the frontend
 app.use('/uploads', express.static('public/uploads')); 
-
+app.use("/api/orders", orderRoutes);
 // Configure where to save uploaded images
 const storage = multer.diskStorage({
   destination: './public/uploads/',

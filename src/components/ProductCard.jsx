@@ -1,49 +1,60 @@
-import React from "react";
+import { ShoppingBag, Star } from "lucide-react";
+import "./ProductCard.css";
 
 const ProductCard = ({ product }) => {
-  const handleAddToCart = async () => {
-    const userId = localStorage.getItem("userId");
-    const token = localStorage.getItem("token");
+  const userId = localStorage.getItem("userId");
 
-    if (!token) return alert("Please login to add items to cart");
+  const handleAddToCart = async () => {
+    if (!userId) {
+      alert("Please login first");
+      return;
+    }
 
     try {
-      const response = await fetch("http://localhost:5000/api/cart/add", {
+      await fetch("http://localhost:5000/api/cart/add", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           userId,
           product: {
-            // FIXED: Handles both static 'id' and MongoDB '_id'
             productId: product._id || product.id,
             name: product.name,
             price: product.price,
-            image: product.image
-          }
-        })
+            image: product.image,
+            quantity: 1,
+          },
+        }),
       });
 
-      if (response.ok) {
-        alert(`${product.name} added to cart!`);
-      }
+      alert("✅ Added to cart!");
     } catch (err) {
-      console.error("Cart error:", err);
+      console.error(err);
+      alert("❌ Failed to add to cart");
     }
   };
 
   return (
     <div className="product-card">
-      {/* FIXED: Wrapped in your CSS class to fix the image size */}
-      <div className="product-image-wrapper">
+      <div className="product-image">
         <img src={product.image} alt={product.name} />
       </div>
-      
+
       <div className="product-info">
         <p className="category">{product.category}</p>
         <h3>{product.name}</h3>
-        <p className="price">${product.price}</p>
+
+        <div className="rating">
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star key={i} size={14} />
+          ))}
+        </div>
+
+        <div className="price-row">
+          <span className="price">${product.price}</span>
+        </div>
+
         <button className="add-btn" onClick={handleAddToCart}>
-          <span className="icon">🛒</span> Add
+          <ShoppingBag size={14} /> Add to Cart
         </button>
       </div>
     </div>
