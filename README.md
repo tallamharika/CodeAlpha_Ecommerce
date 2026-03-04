@@ -4,7 +4,17 @@ An elegant full‑stack E‑Commerce web application built using the MERN stack 
 This project was developed as part of the **CodeAlpha Internship Task – E‑Commerce Website**.
 
 ---
+## 👩‍🎓 Intern Details
 
+Name: TALLAM HARIKA 
+
+Student ID: CA/DF1/23660
+
+Internship Domain: Full Stack Development
+
+Organization: CodeAlpha
+
+Project Name: SIMPLE E-COMMERCE STORE
 ## 🚀 Live Features
 
 - 🔐 User Registration & Login (JWT Authentication)
