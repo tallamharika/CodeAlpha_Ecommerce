@@ -81,21 +81,35 @@ CodeAlpha_Ecommerce
 
 ### 🏠 Home Page
 <p align="center">
-  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(850).png" width="800"/>
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(850).png" width="250"/>
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(859).png" width="250"/>
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(860).png" width="250"/>
 </p>
 
 
 ### 🔐 Login Page
-![Login Page](./screenshots/login.png)
+<p align="center">
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(851).png" width="250"/>
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(852).png" width="250"/>
+</p>
 
 ### 📊 Dashboard
-![Dashboard](./screenshots/dashboard.png)
+<p align="center">
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(853).png" width="250"/>
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(854).png" width="250"/>
+</p>
 
 ### 🛒 Cart Page
-![Cart](./screenshots/cart.png)
+<p align="center">
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(855).png" width="250"/>
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(856).png" width="250"/>
+</p>
 
 ### 📦 Order Stored in MongoDB
-![MongoDB Orders](./screenshots/mongodb-order.png)
+<p align="center">
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(857).png" width="250"/>
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(858).png" width="250"/>
+</p>
 
 *(Create a folder named `screenshots` in the root directory and place images there.)*
 
