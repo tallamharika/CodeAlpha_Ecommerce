@@ -80,7 +80,10 @@ CodeAlpha_Ecommerce
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](./screenshots/home.png)
+<p align="center">
+  <img src="https://github.com/tallamharika/CodeAlpha_Ecommerce/blob/main/Screenshot%20(850).png" width="800"/>
+</p>
+
 
 ### 🔐 Login Page
 ![Login Page](./screenshots/login.png)
